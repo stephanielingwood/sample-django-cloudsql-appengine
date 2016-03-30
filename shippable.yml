@@ -10,16 +10,16 @@ env:
 build:
   ci:
     - echo $GAE_DIR
-    # - >
-    #   test -e $GAE_DIR || 
-    #   (mkdir -p $GAE_DIR && 
-    #   wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -q -O /tmp/gae.zip &&
-    #   unzip /tmp/gae.zip -d $GAE_DIR)
-    - mkdir -p $GAE_DIR
-    - ls -la $GAE_DIR
-    - ls -la /tmp
-    - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -O /tmp/gae.zip
-    - unzip /tmp/gae.zip -d $GAE_DIR)
+    - >
+      test -e $GAE_DIR || 
+      (mkdir -p $GAE_DIR && 
+      wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.35.zip -O /tmp/gae.zip &&
+      unzip /tmp/gae.zip -d $GAE_DIR)
+    # - mkdir -p $GAE_DIR
+    # - ls -la $GAE_DIR
+    # - ls -la /tmp
+    # - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -O /tmp/gae.zip
+    # - unzip /tmp/gae.zip -d $GAE_DIR)
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
