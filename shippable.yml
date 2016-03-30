@@ -9,6 +9,7 @@ env:
  
 build:
   ci:
+    - echo $GAE_DIR
     - >
       test -e $GAE_DIR || 
       (mkdir -p $GAE_DIR && 
