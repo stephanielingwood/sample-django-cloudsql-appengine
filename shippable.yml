@@ -8,6 +8,11 @@ env:
     - GAE_DIR=/tmp/gae
  
 build:
+  pre_ci_boot:
+    image_name: drydock/u14pytall
+    image_tag: prod
+    pull: true
+    options: "-e HOME=/root"
   ci:
     - echo $GAE_DIR
     - >
