@@ -9,6 +9,8 @@ services:
 env:
   global:
     - GAE_DIR=/tmp/gae
+    - EMAIL=stephanie@shippable.com
+    - secure: juT0DE1BJ8uuaCqvxHzs+2H4/dND3bc3WAsc9s26g5zuVYFhP0RTVtuLyEfNdBZ8V+ZFFBLcMZ2t/6l2fyr4TTu2CUywEbSSbJVLDM7wIqdu4isXE7SdoahNEzJpSbGdbW72ipqwNPMnKBwBk+nXJ/IXZNC2gVH6du62Bp/0VKCw97xwcY907BiWRITzYKSxPdxWiZCbqe7wRTgQwHEj8wykeqx9NuSJaJkIC9l6Znpcv9YfcUn2ieRViQHf5Xng4Hc7fesjOCmLyVztHinae4JvzOpN8GBdHTVr39v2KXf2mq7tlxmvRnu9aLZpkGx8rzcaBzgmZbsjA6RealqKdA==
  
 build:
   pre_ci_boot:
@@ -36,4 +38,4 @@ build:
 
 on_success:
   - echo 'yay'
-  # - echo "$GAE_PASSWORD" | $GAE_DIR/google_appengine/appcfg.py -e "$EMAIL" --passin update .
+  - echo "$GAE_PASSWORD" | $GAE_DIR/google_appengine/appcfg.py -e "$EMAIL" --passin update .
