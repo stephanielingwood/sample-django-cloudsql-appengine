@@ -18,7 +18,7 @@ build:
     - mkdir -p $GAE_DIR
     - ls -la $GAE_DIR
     - ls -la /tmp
-    - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -q -O /tmp/gae.zip
+    - wget https://storage.googleapis.com/appengine-sdks/featured/google_appengine_1.9.6.zip -O /tmp/gae.zip
     - unzip /tmp/gae.zip -d $GAE_DIR)
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
