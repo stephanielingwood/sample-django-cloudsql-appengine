@@ -31,7 +31,7 @@ build:
     - pip install -r requirements.txt
     - mkdir -p shippable/testresults
     - mkdir -p shippable/codecoverage
-    - mysql -e 'create database test;'
+    - mysql -e 'create database if not exists test'
     - python manage.py test
 
 on_success:
