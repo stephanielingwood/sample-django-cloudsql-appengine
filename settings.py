@@ -75,7 +75,7 @@ if APP_ENGINE:
   DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.mysql',
-          'HOST': '/cloudsql/testgkeproject-1181:test',
+          'HOST': '/cloudsql/steph-sql-instance-1:test',
           'NAME': 'django_test',
           'USER': 'root',
       }
@@ -86,7 +86,7 @@ elif os.getenv('SETTINGS_MODE') == 'prod':
     DATABASES = {
         'default': {
             'ENGINE': 'google.appengine.ext.django.backends.rdbms',
-            'INSTANCE': 'testgkeproject-1181:test',
+            'INSTANCE': 'steph-sql-instance-1:test',
             'NAME': 'django_test',
             'USER': 'root',
         }
