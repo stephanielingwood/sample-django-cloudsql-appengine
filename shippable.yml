@@ -38,4 +38,4 @@ build:
     - coverage run manage.py test
   on_success:
     - echo 'yay'
-    - echo "$GAE_PASSWORD" | $GAE_DIR/google_appengine/appcfg.py -e "$EMAIL"-A "testgkeproject-1181" list_versions
+    - echo "$GAE_PASSWORD" | $GAE_DIR/google_appengine/appcfg.py -e "$EMAIL" -A "testgkeproject-1181" list_versions
