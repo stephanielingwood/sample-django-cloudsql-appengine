@@ -10,8 +10,8 @@ env:
   global:
     - GAE_DIR=/tmp/gae
     - EMAIL=stephanie@shippable.com
-    - secure: juT0DE1BJ8uuaCqvxHzs+2H4/dND3bc3WAsc9s26g5zuVYFhP0RTVtuLyEfNdBZ8V+ZFFBLcMZ2t/6l2fyr4TTu2CUywEbSSbJVLDM7wIqdu4isXE7SdoahNEzJpSbGdbW72ipqwNPMnKBwBk+nXJ/IXZNC2gVH6du62Bp/0VKCw97xwcY907BiWRITzYKSxPdxWiZCbqe7wRTgQwHEj8wykeqx9NuSJaJkIC9l6Znpcv9YfcUn2ieRViQHf5Xng4Hc7fesjOCmLyVztHinae4JvzOpN8GBdHTVr39v2KXf2mq7tlxmvRnu9aLZpkGx8rzcaBzgmZbsjA6RealqKdA==
- 
+    - secure: KY6N3z5VhfEIlVmoWxQCtWChA900goW5H3I7dxNvcnIdNE7x/UlgXfKnVCRk2rrtR2/XiU68KOxVdtJnVlDXTuP+iUbw8Mdthmw427wcDgeWyu7Pg69dlWsfFKjQfwLBBGWgG9ukQMVFwvvcwoFyjNXEvjcWdclnZAF0E8FTkCNBDsLJ6k5xTDYoOOjnKRGIlEgVHfJz/4QswZZd7IhPLJj58COb5LF6JYmmtNCt1RraHx3AAfpozAX8IIR2ihni2As5UHwWtOe7Ez/vwR4OHFPK//xd5Jv6RHdmiW9gnSE7aNmQtHQYMACk7bEL9FiTPraBWOR6FhErmc0wXkYH5A==
+    
 build:
   pre_ci_boot:
     image_name: drydock/u14pytall
