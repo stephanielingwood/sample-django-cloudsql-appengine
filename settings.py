@@ -75,7 +75,7 @@ if APP_ENGINE:
   DATABASES = {
       'default': {
           'ENGINE': 'django.db.backends.mysql',
-          'HOST': '/cloudsql/testgkeproject-1181:steph-sql-instance-1',
+          'HOST': '/cloudsql/your-project-name-here:your-cloud-sql-instance-name-here',
           'NAME': 'django_test',
           'USER': 'root',
       }
@@ -86,7 +86,7 @@ elif os.getenv('SETTINGS_MODE') == 'prod':
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'INSTANCE': '2001:4860:4864:1:f46e:ede4:99d6:8c2e ',
+            'INSTANCE': 'your-cloud-sql-instance-IP-address-here',
             'NAME': 'django_test',
             'USER': 'root',
         }

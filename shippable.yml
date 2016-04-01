@@ -19,12 +19,9 @@ build:
     - mkdir -p shippable/codecoverage
     - coverage run manage.py test
   on_success:
-    # use gcloud's beta tools for managing app engine projects;
+    # using the Google Cloud SDK's beta tools for managing Google App Engine;
     # details at https://cloud.google.com/sdk/gcloud-app
     - supress=$(echo $SERVICE_ACCOUNT_KEY > /tmp/key.json)
     - gcloud -q auth activate-service-account --verbosity=debug --key-file /tmp/key.json
-    - gcloud config set project testgkeproject-1181
+    - gcloud config set project your-project-name-here
     - gcloud preview app deploy $SHIPPABLE_REPO_DIR/app.yaml
-
-
-
